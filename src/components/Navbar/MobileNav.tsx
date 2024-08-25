@@ -2,12 +2,13 @@ import { Menu } from 'lucide-react'
 import {
   Sheet,
   SheetClose,
-  SheetContent,
-  SheetHeader,
+  SheetContent, SheetDescription,
+  SheetHeader, SheetTitle,
   SheetTrigger,
-} from '../ui/sheet'
+} from "../ui/sheet";
 import { images } from '@/constants'
 import { navlinks } from '@/constants/data'
+import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
 
 const MobileNav = () => {
   return (
@@ -22,6 +23,9 @@ const MobileNav = () => {
         >
           <SheetHeader>
             <img src={images.gericht} alt='logo' className='w-[200px]' />
+
+            <VisuallyHidden><SheetTitle>Gericht</SheetTitle>
+              <SheetDescription>Gericht</SheetDescription></VisuallyHidden>
           </SheetHeader>
           <div className='flex flex-col gap-10 items-start mt-10'>
             {navlinks.map((link) => (
@@ -34,11 +38,11 @@ const MobileNav = () => {
               </SheetClose>
             ))}
           </div>
-          <div className='w-full flex flex-col gap-10'>
+          <div className='w-full flex flex-col gap-10 mt-10 font-bold'>
             <SheetClose asChild>
               <button
                 type='button'
-                className='rounded-full mx-auto text-white hover:border hover:border-my-golden py-2 px-10 text-xl'
+                className='outline-0 rounded-full mx-auto text-my-golden hover:border hover:border-my-golden py-2 px-10 text-2xl'
               >
                 Log in / Registration
               </button>
@@ -46,7 +50,7 @@ const MobileNav = () => {
             <SheetClose asChild>
               <button
                 type='button'
-                className='rounded-full mx-auto text-white hover:border hover:border-my-golden py-2 px-10 text-xl'
+                className='outline-0 rounded-full mx-auto text-my-golden hover:border hover:border-my-golden py-2 px-10 text-2xl'
               >
                 Book a table
               </button>
