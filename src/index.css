@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,12 +10,36 @@
   }
 }
 
+
+
+
 * {
-  font-family: var(--font-base), serif;
+  /*font-family: var(--font-base), serif;*/
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
+
+.sideways {
+  writing-mode: vertical-rl;
+}
+
+h2 {
+  line-height: 83px;
+}
+
+h3 {
+  line-height: 59px;
+}
+
+h5 {
+  line-height: 30px;
+}
+
+p {
+  line-height: 28px;;
+}
+
 
 /* asdasd */
 :root {
@@ -27,6 +52,16 @@
   --color-crimson: #f5efdb;
   --color-grey: #aaaaaa;
   --color-white: #ffffff;
+  
+/*  font sizes */
+  --body-regular: 16px;
+  --h1: 90px;
+  --h2: 64px;
+  --h3: 45px;
+  --h4: 32px;
+  --h5: 23px;
+  
+  
 }
 
 * {
